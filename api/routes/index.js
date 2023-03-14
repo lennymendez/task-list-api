@@ -1,7 +1,7 @@
 'use-strict';
 
-const HelloWorld = require('./hello-world.js');
+const db = require('./db.js');
 
 module.exports = [
-  ...HelloWorld
+  ...db
 ];

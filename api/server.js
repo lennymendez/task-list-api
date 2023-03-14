@@ -3,7 +3,6 @@
 // IMPORTS
 const Hapi = require('@hapi/hapi');
 const Routes = require('./routes');
-const Plugins = require('./plugins');
 
 // GET ACCESS TO THE ENV VARIABLES
 const path = require('path');
@@ -20,8 +19,6 @@ const server = Hapi.server({
 
 // CREATE SERVER
 const createServer = async () => {
-  // PLUGIN REGISTRATION
-  await server.register(Plugins);
   await server.initialize()
   return server
 }
